@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Android Chrome -->
+    <meta name="theme-color" content="#009688">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BaseUI">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../public/images/favicon.ico" />
+
+    <!-- Meta Tags -->
+    <title>Base UI</title>
+    <meta name= "description" content="Basic user interface for Mobile and Web application with MeteorJS."/>
+    <meta name= "keywords" content="base ui, meteor, user interface, web, mobile, application, basic, easy, simple"/>
+
+    <!-- Meta Tags OG -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Base UI"/>
+    <meta property="og:url" content="http://baseui.atulmy.com/"/>
+    <meta property="og:image" content="http://baseui.atulmy.com/images/logo.png"/>
+    <meta property="og:description" content="Basic user interface for Mobile and Web application with MeteorJS."/>
+    <meta property="og:site_name" content="http://baseui.atulmy.com/"/>
+
+    <!-- CSS -->
+        <!-- External -->
+        <link rel="stylesheet" type="text/css" href="../public/css/external/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/external/font-awesome.min.css" />
+        <!-- BaseUI -->
+        <link rel="stylesheet" type="text/css" href="../public/css/optional/buttons.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/optional/colors.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/optional/forms.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/optional/grid.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/baseui.css" />
+
+    <!-- JS -->
+        <!-- External -->
+        <script type="text/javascript" src="../public/js/external/jquery-1.12.2.min.js"></script>
+        <script type="text/javascript" src="../public/js/external/jquery.transit.min.js"></script>
+        <!-- BaseUI -->
+        <script type="text/javascript" src="../public/js/baseui.js"></script>
+
+    <style>
+        /* demo */
+        .colors div { padding: 10px 15px; }
+    </style>
+</head>
+
+<body>
+<!-- Background -->
+<div id="app-background">
+    <div class="head"></div>
+    <div class="body"></div>
+</div>
+
+<!-- Wrapper -->
+<div id="app-wrapper">
+
+    <!-- Header -->
+    <div id="app-header">
+        <nav>
+            <div class="section left">
+                <a href="index.html" class="action">Back</a>
+            </div>
+
+            <div class="section middle">
+                <div class="title">Optional</div>
+            </div>
+
+            <div class="section right">
+                <a href="index.html" class="action mobile-menu-links">Home</a>
+                <a href="about.html" class="action mobile-menu-links">About</a>
+                <a href="widgets.html" class="action mobile-menu-links">Widgets</a>
+                <a href="optional.html" class="action mobile-menu-links">Optional</a>
+            </div>
+        </nav>
+
+        <div class="mobile menu">
+            <a href="index.html" class="action mobile-menu-links">Home</a>
+            <a href="about.html" class="action mobile-menu-links">About</a>
+            <a href="widgets.html" class="action mobile-menu-links">Widgets</a>
+            <a href="optional.html" class="action mobile-menu-links">Optional</a>
+        </div>
+        <div class="mobile menu-backdrop"></div>
+    </div>
+
+    <!-- Content -->
+    <div id="app-content">
+        <div class="animate fadein">
+            <div class="content">
+                <div>
+                    <h3 class="tx-center">Optional Styles and Components</h3>
+                </div>
+
+                <hr/>
+
+                <div>
+                    <h3 class="tx-center">Grid</h3>
+
+                    <p>Mobile Device (s) (&lt; 993px)</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s4">.container .row .col.s4</div>
+                            <div class="col s4">.container .row .col.s4</div>
+                            <div class="col s4">.container .row .col.s4</div>
+                        </div>
+                    </div>
+
+                    <p>Desktop Device (l) (&gt;= 993px)</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l6">.container .row .col.l6</div>
+                            <div class="col l6">.container .row .col.l6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div>
+                    <h3 class="tx-center">Buttons</h3>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s4 tx-center">
+                                <a href="#" class="button">Anchor</a>
+                            </div>
+
+                            <div class="col s4 tx-center">
+                                <input type="button" value="Input" />
+                            </div>
+
+                            <div class="col s4 tx-center">
+                                <button>Button</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <button class="button-primary width100">Button Primary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div>
+                    <h3 class="tx-center">Form Elements</h3>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="text" placeholder="Input text"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <textarea rows="5" placeholder="Textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <select>
+                                    <option>Technology</option>
+                                    <option>Science</option>
+                                    <option>Food</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div>
+                    <h3 class="tx-center">Colors</h3>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s6 colors">
+                                <div class="red white-text">.red .white-text</div>
+                                <div class="pink">pink</div>
+                                <div class="purple">purple</div>
+                                <div class="deep-purple">deep-purple</div>
+                                <div class="indigo">indigo</div>
+                                <div class="blue">blue</div>
+                                <div class="light-blue">light-blue</div>
+                                <div class="cyan">cyan</div>
+                                <div class="teal">teal</div>
+                            </div>
+
+                            <div class="col s6 colors">
+                                <div class="green">green</div>
+                                <div class="light-green">light-green</div>
+                                <div class="lime">lime</div>
+                                <div class="yellow">yellow</div>
+                                <div class="amber">amber</div>
+                                <div class="orange">orange</div>
+                                <div class="deep-orange">deep-orange</div>
+                                <div class="brown">brown</div>
+                                <div class="grey">grey</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="tx-center">
+                        <a href="optional/colors.html" class="button">View All Colors</a>
+                    </p>
+                </div>
+                <hr/>
+
+                <div>
+                    <h3 class="tx-center">Fontawesome</h3>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s4 tx-center">
+                                <i class="fa fa-star"></i>
+                            </div>
+
+                            <div class="col s4 tx-center">
+                                <a href="#" class="button">Next <i class="fa fa-chevron-right"></i></a>
+                            </div>
+
+                            <div class="col s4 tx-center">
+                                <a href="#" class="button button-primary"><i class="fa fa-check"></i> Ok</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="tx-center">
+                        <a href="optional/fontawesome.html" class="button">View More</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="app-footer">
+        <nav>
+            <div class="section">
+                <a href="index.html">Home</a>
+            </div>
+
+            <div class="section">
+                <a href="blog/list.html">Latest</a>
+            </div>
+
+            <div class="section">
+                <a href="blog/list.html">Trending</a>
+            </div>
+
+            <div class="section">
+                <a href="user/profile.html">Profile</a>
+            </div>
+        </nav>
+    </div>
+
+</div>
+
+<!-- Page Scripts -->
+<script>
+    $( function() {
+        App.init();
+    });
+</script>
+</body>
+</html>

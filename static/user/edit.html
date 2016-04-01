@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Android Chrome -->
+    <meta name="theme-color" content="#009688">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BaseUI">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../public/images/favicon.ico" />
+
+    <!-- Meta Tags -->
+    <title>Base UI</title>
+    <meta name= "description" content="Basic user interface for Mobile and Web application with MeteorJS."/>
+    <meta name= "keywords" content="base ui, meteor, user interface, web, mobile, application, basic, easy, simple"/>
+
+    <!-- Meta Tags OG -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Base UI"/>
+    <meta property="og:url" content="http://baseui.atulmy.com/"/>
+    <meta property="og:image" content="http://baseui.atulmy.com/images/logo.png"/>
+    <meta property="og:description" content="Basic user interface for Mobile and Web application with MeteorJS."/>
+    <meta property="og:site_name" content="http://baseui.atulmy.com/"/>
+
+    <!-- CSS -->
+        <!-- External -->
+        <link rel="stylesheet" type="text/css" href="../../public/css/external/normalize.css" />
+        <!-- BaseUI -->
+        <link rel="stylesheet" type="text/css" href="../../public/css/baseui.css" />
+
+    <!-- JS -->
+        <!-- External -->
+        <script type="text/javascript" src="../../public/js/external/jquery-1.12.2.min.js"></script>
+        <script type="text/javascript" src="../../public/js/external/jquery.transit.min.js"></script>
+        <!-- BaseUI -->
+        <script type="text/javascript" src="../../public/js/baseui.js"></script>
+</head>
+
+<body>
+    <!-- Background -->
+    <div id="app-background">
+        <div class="head"></div>
+        <div class="body"></div>
+    </div>
+
+    <!-- Wrapper -->
+    <div id="app-wrapper">
+
+        <!-- Header -->
+        <div id="app-header">
+            <nav>
+                <div class="section left">
+                    <a href="profile.html" class="action">Back</a>
+                </div>
+
+                <div class="section middle">
+                    <div class="title">Profile Edit</div>
+                </div>
+
+                <div class="section right">
+                    <a href="../index.html" class="action mobile-menu-links">Home</a>
+                    <a href="../about.html" class="action mobile-menu-links">About</a>
+                    <a href="../widgets.html" class="action mobile-menu-links">Widgets</a>
+                    <a href="../optional.html" class="action mobile-menu-links">Optional</a>
+
+                    <a href="profile.html" class="action">Submit</a>
+                </div>
+            </nav>
+
+            <div class="mobile menu">
+                <a href="../index.html" class="action mobile-menu-links">Home</a>
+                <a href="../about.html" class="action mobile-menu-links">About</a>
+                <a href="../widgets.html" class="action mobile-menu-links">Widgets</a>
+                <a href="../optional.html" class="action mobile-menu-links">Optional</a>
+            </div>
+            <div class="mobile menu-backdrop"></div>
+        </div>
+
+        <!-- Content -->
+        <div id="app-content">
+            <div class="animate fadein vertical-align">
+                <div class="content vertical-align-child">
+                    <form>
+                        <div class="clearfix">
+                            <p>Name</p>
+                            <p><input type="text" class="width100" value="Atul Yadav"/></p>
+                        </div>
+
+                        <div class="clearfix">
+                            <p>About you</p>
+                            <p>
+                                <textarea rows="5" class="width100">I'm a full stack developer with interest in web and mobile application development, especially with MeteorJS :)</textarea>
+                            </p>
+                        </div>
+
+                        <div class="clearfix">
+                            <p>Interests</p>
+                            <p>
+                                <label><input type="checkbox" checked="checked"/> Technology</label>
+                            </p>
+                            <p>
+                                <label><input type="checkbox" checked="checked"/> Science</label>
+                            </p>
+                            <p>
+                                <label><input type="checkbox" /> Food</label>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="app-footer">
+            <nav>
+                <div class="section">
+                    <a href="../index.html">Home</a>
+                </div>
+
+                <div class="section">
+                    <a href="../blog/list.html">Latest</a>
+                </div>
+
+                <div class="section">
+                    <a href="../blog/list.html">Trending</a>
+                </div>
+
+                <div class="section">
+                    <a href="profile.html">Profile</a>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- Page Scripts -->
+    <script>
+        $( function() {
+            App.init();
+        });
+    </script>
+</body>
+</html>

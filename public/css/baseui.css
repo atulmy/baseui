@@ -1,0 +1,578 @@
+/* --------------- Common --------------- */
+    html, body {
+        padding: 0px;
+        margin: 0px;
+        background-color: #efebe9;
+        color: black;
+        line-height: normal;
+        font-family: sans-serif;
+    }
+    .clearfix { clear: both; }
+    .cursor-pointer { cursor: pointer; }
+    .width100 { width: 100%; }
+    .height100 { height: 100%; }
+    .display-none { display: none; }
+    .display-block { display: block; }
+    .fadein { opacity: 0; }
+    .animate { -webkit-backface-visibility: hidden; -webkit-transition: translate3d(0,0,0); }
+    .opacity-0 { opacity: 0; }
+    .opacity-0-5 { opacity: 0.5; }
+    .scale-0 { -ms-transform: scale(0); -webkit-transform: scale(0); transform: scale(0); }
+    .scale-0-5 { -ms-transform: scale(0.5); -webkit-transform: scale(0.5); transform: scale(0.5); }
+    .pull-left { float: left; }
+    .pull-right { float: right; }
+    p { margin-top: 0px; }
+/* --------------- / Common --------------- */
+
+/* --------------- Typography --------------- */
+    a { text-decoration: none; color: black; }
+    .tx-center { text-align: center; }
+    .tx-uppercase { text-transform: uppercase; }
+    .tx-underlined { text-decoration: underline; }
+    .tx-italic { font-style: italic; }
+    /* size */
+        .tx-xxs { font-size: 10px; }
+        .tx-xs { font-size: 12px; }
+        .tx-sm { font-size: 14px; }
+        .tx-md { font-size: 18px; }
+        .tx-lg { font-size: 22px; }
+        .tx-xl { font-size: 28px; }
+    /* thickness */
+        .tx-thin { font-weight: 100; }
+        .tx-light { font-weight: 200; }
+        .tx-lighter { font-weight: 300; }
+        .tx-bold { font-weight: 500; }
+        .tx-bolder { font-weight: 700; }
+/* --------------- / Typography --------------- */
+
+/* --------------- Content --------------- */
+    /* vertical align */
+        .vertical-align {
+            display: table;
+            height: 100%;
+            width: 100%;
+            margin: 0px !important;
+        }
+        .vertical-align .vertical-align-child {
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+            height: 100%;
+            width: 100%;
+        }
+    /* loader */
+        .common-loading {
+            text-align: center;
+        }
+    /* widths */
+        .full { width: 100%; }
+        .half { width: 50%; }
+        .quarter { width: 25%; }
+    /* mix */
+        .fullscreen {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 4;
+            background-color: #fff;
+        }
+/* --------------- / Content --------------- */
+
+/* --------------- App Wrapper --------------- */
+    #app-wrapper {
+        clear: both;
+        padding: 0px;
+        margin: 0px;
+    }
+/* --------------- / App Wrapper --------------- */
+
+
+/* --------------- App Header --------------- */
+    #app-header {
+        clear: both;
+        height: 50px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    }
+    #app-header nav {
+        height: 50px;
+    }
+    #app-header nav .section {
+        padding: 0px;
+        display: table;
+        height: 100%;
+        float: left;
+    }
+    #app-header nav .section.left, #app-header nav .section.right {
+        width: 25%;
+    }
+    #app-header nav .section.middle {
+        width: 50%;
+    }
+    #app-header nav .section .action, #app-header nav .section .title {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #app-header nav .section a:hover, #app-header nav .section a.active {
+        background-color: #ccc;
+    }
+    #app-header nav .section a:last-child {
+        border-right: none;
+    }
+/* --------------- / App Header --------------- */
+
+/* --------------- App Content --------------- */
+    #app-content {
+        clear: both;
+        top: 50px;
+        bottom: 70px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        padding: 15px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #app-content .content {
+        height: 100%;
+    }
+/* --------------- / App Content --------------- */
+
+/* --------------- App Footer --------------- */
+    #app-footer {
+        clear: both;
+        height: 70px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0 !important;
+        z-index: 1;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+    #app-footer nav {
+        height: 70px;
+    }
+    #app-footer nav .section {
+        padding: 0px;
+        display: table;
+        height: 100%;
+        width: 25%;
+        float: left;
+    }
+    #app-footer nav .section a {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #app-footer nav .section a i {
+        display: block;
+        margin-bottom: 5px;
+    }
+    #app-footer nav .section a:hover, #app-footer nav .section a.active {
+        background-color: #ccc;
+    }
+    #app-footer nav .section a:last-child {
+        border-right: none;
+    }
+/* --------------- / App Footer --------------- */
+
+/* --------------- App Focused --------------- */
+    .focused #app-content {
+        bottom: 0px !important;
+    }
+    .focused #app-footer {
+        display: none;
+    }
+/* --------------- / App Focused --------------- */
+
+/* --------------- Elements --------------- */
+    /* buttons */
+        .btn {
+            padding: 5px 10px;
+            background-color: #ccc;
+            border: none;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            box-shadow: 0px 0px 10px #ccc;
+        }
+/* --------------- / Elements --------------- */
+
+/* --------------- Widgets --------------- */
+    /* Modal */
+        /* basic */
+            .modal {
+                opacity: 0;
+                position: fixed;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                z-index: 5;
+                background-color: transparent;
+                transform: translate(0, calc(100%));
+            }
+            .modal .modal-inner {
+                position: absolute;
+                left: 10%;
+                right: 10%;
+                top: 20%;
+                bottom: 20%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                background-color: #fff;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+            }
+            .modal .modal-inner .modal-header {
+                height: 50px;
+                position: absolute;
+                top: 0px;
+                display: table;
+                width: 100%;
+            }
+            .modal .modal-inner .modal-content {
+                padding: 0px 15px;
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 50px;
+                bottom: 50px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .modal .modal-inner .modal-footer {
+                height: 50px;
+                position: absolute;
+                bottom: 0px;
+                display: table;
+                width: 100%;
+                box-shadow: 0px 0px 10px #ccc;
+            }
+            .modal .modal-inner .modal-header .section, .modal .modal-inner .modal-footer .section {
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .modal .modal-inner .modal-footer .section:hover, .modal .modal-inner .modal-footer .section:active {
+                background-color: #ccc;
+            }
+            .modal-backdrop {
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-color: rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                z-index: 4;
+                transform: translate(100%, 0);
+            }
+        /* full */
+            .modal-full {
+                opacity: 0;
+                position: fixed;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                z-index: 4;
+                background-color: #fff;
+                transform: translate(0, calc(100%));
+            }
+            .modal-full .modal-full-header {
+                height: 50px;
+                position: absolute;
+                top: 0px;
+                display: table;
+                width: 100%;
+            }
+            .modal-full .modal-full-content {
+                padding: 0px 15px;
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 50px;
+                bottom: 50px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .modal-full .modal-full-footer {
+                height: 50px;
+                position: absolute;
+                bottom: 0px;
+                display: table;
+                width: 100%;
+                box-shadow: 0px 0px 10px #ccc;
+            }
+            .modal-full .modal-full-header .section, .modal-full .modal-full-footer .section {
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .modal-full .modal-full-footer .section:hover, .modal-full .modal-full-footer .section:active {
+                background-color: #ccc;
+            }
+        /* bottomsheet */
+            .modal-bottomsheet {
+                opacity: 0;
+                position: fixed;
+                top: 50%;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-color: #fff;
+                z-index: 5;
+                transform: translate(0, calc(100%));
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+            }
+            .modal-bottomsheet .modal-bottomsheet-content {
+                padding: 15px;
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .modal-bottomsheet-backdrop {
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-color: rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                z-index: 4;
+                transform: translate(100%, 0);
+            }
+    /* slider */
+        .slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+        }
+        .slider .slider-item {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .slider .slider-item.animate-css {
+            transition: all .2s;
+            -webkit-transition: all .2s;
+        }
+    /* tabs */
+        .tabs {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            display: table;
+            min-height: 30px;
+        }
+        .tabs a {
+            display: table-cell;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px 0px;
+        }
+        .tabs a:hover, .tabs a.active {
+            border-bottom: 3px solid #ccc;
+        }
+        .tab-content {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .tab-content.active {
+            display: block;
+        }
+/* --------------- / Widgets --------------- */
+
+/* --------------- Responsive --------------- */
+    /* mobile */
+        @media (max-width: 992px) {
+            /* wrapper */
+                #app-wrapper {
+                    transform: none !important;
+                }
+            /* header */
+                #app-header .desktop {
+                    display: none !important;
+                }
+                /* menu */
+                    #app-header .mobile.menu {
+                        position: fixed;
+                        width: 200px;
+                        left: 0px;
+                        top: 0px;
+                        bottom: 0px;
+                        background-color: #fff;
+                        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+                        transform: translate(-210px, 0);
+                        z-index: 6;
+                    }
+                    #app-header .mobile.menu a {
+                        display: block;
+                        padding: 20px 15px;
+                    }
+                    #app-header .mobile.menu a:hover, #app-header .mobile.menu a.active {
+                        background-color: #eee;
+                    }
+                    #app-header nav .section .mobile-menu-links {
+                        display: none;
+                    }
+                    #app-header .mobile.menu-backdrop {
+                        position: fixed;
+                        width: 100%;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        opacity: 0;
+                        z-index: 5;
+                        transform: translate(100%, 0);
+                    }
+            /* footer */
+                #app-footer nav .section.half {
+                    width: 50%;
+                }
+        }
+
+    /* desktop hd */
+        @media (min-width: 993px) {
+            /* wrapper */
+                #app-wrapper {
+                    left: 15%;
+                    right: 15%;
+                    top: 7%;
+                    bottom: 7%;
+                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+                    background-color: #EFEBE9;
+                    position: fixed;
+                    border-radius: 2px;
+                    overflow: hidden;
+                    transform: scale(1.5);
+                }
+            /* header */
+                #app-header .mobile {
+                    display: none !important;;
+                }
+                #app-header {
+                    left: 200px;
+                }
+                #app-header nav .section {
+                    padding: 0px;
+                    display: table;
+                    height: 100%;
+                    float: left;
+                }
+                #app-header nav .section.left {
+                    float: left;
+                    width: auto;
+                }
+                #app-header nav .section.left .action {
+                    color: #999;
+                }
+                #app-header nav .section.left .action.menu-show {
+                    display: none;
+                }
+                #app-header nav .section.middle {
+                    width: auto;
+                    float: left;
+                }
+                #app-header nav .section.right {
+                    float: right;
+                    width: auto;
+                }
+                #app-header nav .section .title {
+                    text-align: left;
+                    padding-left: 20px;
+                }
+                #app-header nav .section .action, #app-header nav .section .title {
+                    padding: 0px 10px;
+                }
+
+            /* content */
+                #app-content {
+                    left: 200px;
+                    bottom: 0px;
+                    overflow-y: visible;
+                }
+
+            /* footer */
+                #app-footer {
+                    width: 200px;
+                    left: 0px;
+                    height: calc(100%);
+                    box-shadow: none;
+                    z-index: 3;
+                    display: block !important;
+                    border-top: none;
+                    border-right: 1px solid #d3d3d3;
+                }
+                #app-footer nav {
+                    height: 100%;
+                }
+                #app-footer nav .section {
+                    width: 100%;
+                    height: 25%;
+                    display: table;
+                    border-bottom: 1px solid #f6f6f6;
+                }
+                #app-footer nav .section a {
+                    height: 100%;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+            /* app background */
+                #app-background .head {
+                    height: 20%;
+                    background-color: #009688;
+                    width: 100%;
+                    position: fixed;
+                }
+                #app-background .body {
+                    top: 20%;
+                    height: 80%;
+                    background-color: #DFDFDF;
+                    width: 100%;
+                    position: fixed;
+                }
+        }
+
+    /* desktop */
+        @media (max-width: 1024px) {
+            #app-wrapper {
+                left: 10%;
+                right: 10%;
+            }
+        }
+
+/* --------------- / Responsive --------------- */
