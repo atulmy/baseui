@@ -1,10 +1,6 @@
 # Base UI
 Basic user interface for Mobile and Web application.
 
-Demo: http://baseui.atulmy.com/static/index.html
-
- Preview on Resizer: http://design.google.com/resizer/#url=http://baseui.atulmy.com/static/index.html
-
 ## What is it?
 - Not a CSS framework
 - Just simple set of CSS
